@@ -5,7 +5,7 @@ import { images } from "./data";
 function App() {
   return (
     <>
-      <header className="sticky top-0">
+      <header className="sticky top-0 z-30">
         <Navbar />
       </header>
       <div className="lg:container h-96 pt-0 ">

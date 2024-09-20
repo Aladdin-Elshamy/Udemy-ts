@@ -15,8 +15,8 @@ export default function Search({ setSearchOpen }: IProps) {
   }
   return (
     <div
-      className="w-full h-full
-    absolute z-50 bg-white top-0 left-0"
+      className="w-full h-screen
+    fixed z-50 bg-white top-0 left-0"
     >
       <form action="" className="relative border-b" onSubmit={handleSubmit}>
         <input
