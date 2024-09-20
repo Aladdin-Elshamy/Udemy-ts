@@ -14,9 +14,8 @@ import CategoriesList from "../elements/CategoriesList";
 import NestedDropdownMenu from "./NestedDropdownMenu";
 export default function DropdownMenu() {
   const [open, setOpen] = useState("");
-  console.log(open);
   return (
-    <aside className="bg-white border w-64 h-[700px] shadow-lg">
+    <aside className="bg-white border w-64 h-[600px] shadow-lg">
       <ul className="flex flex-col gap-2 py-4">
         <li
           onMouseEnter={() => setOpen("Web Development")}

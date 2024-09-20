@@ -15,7 +15,7 @@ export default function PopModal({ title, children }: IProps) {
   });
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <Popover className="relative flex flex-col items-end">
+    <Popover className="hidden md:flex relative  flex-col items-end">
       <PopoverButton
         ref={ref}
         className={`${isHovered ? "text-hover" : ""} focus:outline-none`}

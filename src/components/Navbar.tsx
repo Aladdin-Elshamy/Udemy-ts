@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="fixed top-0 md:none left-0 w-full h-full md:hidden bg-black opacity-50"></div>
       )}
 
-      <nav className="px-5 py-4 shadow-lg">
+      <nav className="px-5 py-4 shadow-lg top-0 bg-white">
         <ul className="flex items-center justify-between gap-2 [&>li]:cursor-pointer [&>li]:flex-shrink-0 ">
           <li className="md:hidden" onClick={() => setAsideOpen(true)}>
             <RxHamburgerMenu className="text-xl" />
@@ -39,12 +39,12 @@ export default function Navbar() {
             onMouseLeave={() => setIsHovered(false)}
             className="hidden md:block hover:text-hover relative"
           >
-            <span>Categories</span>
+            <span className="block p-2">Categories</span>
 
             <div
               className={`${
                 isHovered ? "block" : "hidden"
-              } pt-8 cursor-default text-black absolute`}
+              } pt-6 cursor-default text-black absolute`}
             >
               <DropdownMenu />
             </div>
