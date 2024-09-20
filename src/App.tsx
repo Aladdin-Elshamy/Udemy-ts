@@ -7,10 +7,10 @@ function App() {
     <>
       <header className="sticky top-0">
         <Navbar />
-        <div className="lg:container h-96 pt-0 ">
-          <ImageSlider images={images} />
-        </div>
       </header>
+      <div className="lg:container h-96 pt-0 ">
+        <ImageSlider images={images} />
+      </div>
     </>
   );
 }
