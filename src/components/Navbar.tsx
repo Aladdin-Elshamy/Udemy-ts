@@ -44,7 +44,7 @@ export default function Navbar() {
             <div
               className={`${
                 isHovered ? "block" : "hidden"
-              } pt-6 cursor-default text-black absolute`}
+              } pt-6 cursor-default text-black absolute z-20`}
             >
               <DropdownMenu />
             </div>

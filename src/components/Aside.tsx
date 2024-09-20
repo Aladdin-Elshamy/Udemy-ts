@@ -31,7 +31,7 @@ export default function Aside({ asideOpen, setAsideOpen }: IProps) {
           open || langAsideOpen ? "min-h-screen" : "max-h-screen"
         }  transition-all duration-300 z-20 fixed top-0 left-0 md:hidden`}
       >
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-sm sm:text-base">
           <div className="flex flex-col gap-2 py-2 border-b-2">
             <a href="#" className="text-primary px-4 py-1 font-medium">
               Log in

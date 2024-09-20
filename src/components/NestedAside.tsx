@@ -11,7 +11,7 @@ export default function NestedAside({ open, setOpen, children }: IProps) {
     <div
       className={`${
         open ? "right-0" : "right-[-100%]"
-      } top-0 absolute transition-all duration-300 bg-white w-full h-full z-40`}
+      } top-0 absolute transition-all duration-300 bg-white w-full h-full z-40 text-sm sm:text-base`}
     >
       <button
         className="flex items-center bg-gray-100 w-full px-4 gap-2 py-4"
