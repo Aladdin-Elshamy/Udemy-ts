@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media(max-width:467px){
+  .aside-close{
+    @apply left-[65%]
+  }
+}
