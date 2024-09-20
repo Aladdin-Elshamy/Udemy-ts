@@ -1,42 +1,207 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* swiper  */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.swiper {
+  width: 100%;
+  height: 500px;
+  margin: 20px auto;
+  margin-top: -80px !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: none !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: #2d2f31;
+  border-radius: 50%;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.box {
+  position: relative;
+}
+
+.swiper-backface-hidden .swiper-slide {
+  transform: none;
+}
+
+/* hover menu */
+.menu {
+  border: 1px solid rgba(128, 128, 128, 0.26);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -70px;
+  left: 105%;
+  width: 300px;
+  background-color: white;
+  padding: 15px;
+  z-index: 10 !important;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.116);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.box:hover .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 25px;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  border-left: 15px solid transparent;
+  border-right: 15px solid #5022c3;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.swiper-slide:nth-child(4) .menu,
+.swiper-slide:nth-child(5) .menu {
+  left: auto;
+  right: 105%;
+}
+
+.swiper-slide:nth-child(4) .menu::after,
+.swiper-slide:nth-child(5) .menu::after {
+  left: auto;
+  right: -30px;
+  border-left: 15px solid #5022c3;
+  border-right: 15px solid transparent;
+}
+
+/* mui tabs  */
+.css-1sj2jcg-MuiTabs-indicator {
+  display: none !important;
+}
+
+.css-19kzrtu {
+  padding: 0 !important;
+}
+
+.css-19wsa2m-MuiButtonBase-root-MuiTab-root,
+.css-9gnw14 {
+  color: gray !important;
+  font-weight: 600 !important;
+  text-transform: capitalize !important;
+  font-size: 16px !important;
+}
+
+.css-314rep {
+  display: none !important;
+}
+
+.css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+.css-9gnw14.Mui-selected {
+  color: black !important;
+  font-weight: 600 !important;
+  text-transform: capitalize !important;
+  font-size: 16px !important;
+}
+
+.css-heg063-MuiTabs-flexContainer {
+  flex-wrap: wrap !important;
+}
+
+.testimonil-box {
+  height: 350px !important;
+}
+
+.customer-box {
+  height: 350px !important;
+}
+
+.testimonial-swiper {
+  margin-top: 0 !important;
+}
+
+.customer-swiper {
+  width: 65% !important;
+  height: 100% !important;
+}
+
+.customer-img {
+  width: 70% !important;
+  height: 50% !important;
+}
+
+@media(max-width:768px) {
+  .swiper-slide {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .swiper {
+    margin-top: 10px !important;
+    height: auto !important;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .menu,
+  .course-title {
+    display: none !important;
+  }
 
-.read-the-docs {
-  color: #888;
+  .testimonial-swiper-slider {
+    margin-top: 30px !important;
+  }
+
+  .testimonial-swiper {
+    margin-top: 50px !important;
+  }
+
+  .testimonil-box,
+  .customer-box {
+    height: auto !important;
+  }
+
+  .customer-swiper {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+  .css-19wsa2m-MuiButtonBase-root-MuiTab-root,
+  .css-9gnw14.Mui-selected,
+  .css-9gnw14 {
+    font-size: 14px !important;
+  }
+
+  .css-heg063-MuiTabs-flexContainer,
+  .css-k008qs {
+    flex-direction: column;
+    align-items: start;
+  }
+
 }
