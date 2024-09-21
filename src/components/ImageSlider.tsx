@@ -91,7 +91,7 @@ export default function ImageSlider({ images }: IProps) {
       <div className="w-full h-full hidden md:flex overflow-x-hidden">
         {images.map((image) => (
           <div
-            key={image.title}
+            key={image.title + image.url[0]}
             style={{
               transform: `translateX(-${imageIndex * 100}%)`,
               backgroundImage: `url(${image.url[1]})`,
