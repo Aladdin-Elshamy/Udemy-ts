@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import ImageSlider from "./components/ImageSlider";
 import { images } from "./data";
 import PartnersSection from "./components/Partners";
+import Features from "./components/Features";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       </div>
       <main>
         <PartnersSection />
+        <Features />
       </main>
     </>
   );
