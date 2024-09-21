@@ -15,12 +15,12 @@ export default function SlideText({
 }: IProps) {
   return (
     <>
-      <div className={`container pt-4 flex flex-col`}>
+      <div className={`container pt-4 flex gap-4 flex-col min-h-[280px]`}>
         <h2 className="text-2xl font-bold ">{title}</h2>
-        <p className="font-medium py-3 w-4/5">{description}</p>
+        <p className="font-mediumw-4/5">{description}</p>
         {children}
         <button
-          className="border justify-center border-black min-w-[252px] max-w-[420px] flex items-center gap-4 p-4 mt-4"
+          className="mb-4 border justify-center border-black min-w-[252px] max-w-[420px] flex items-center gap-4 px-4 py-2 mt-4"
           onClick={() => setSearchOpen(true)}
         >
           <p className="text-gray-600 ">What do you want to learn?</p>

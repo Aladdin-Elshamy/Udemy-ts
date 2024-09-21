@@ -29,7 +29,7 @@ export default function ImageSlider({ images }: IProps) {
   }
 
   return (
-    <div className="w-full h-full relative overflow-hidden">
+    <div className="w-full h-full relative overflow-x-hidden">
       {searchOpen && <Search setSearchOpen={setSearchOpen} />}
       <div className="image-container w-full h-full flex md:hidden overflow-scroll no-scrollbar">
         {images.map((image, index) => (
@@ -56,7 +56,7 @@ export default function ImageSlider({ images }: IProps) {
               >
                 <a
                   href="#"
-                  className="max-w-[420px] border border-black block font-semibold text-center bg-black text-white p-4 w-4/5"
+                  className="max-w-[420px] border border-black block font-semibold text-center bg-black text-white px-4 py-2 w-4/5"
                 >
                   Take the course
                 </a>
@@ -72,13 +72,13 @@ export default function ImageSlider({ images }: IProps) {
                 <div className="flex flex-col items-start gap-2">
                   <a
                     href="#"
-                    className="w-4/5 max-w-[420px] border border-black block font-semibold text-center bg-black text-white p-4"
+                    className="md:w-4/5 w-full max-w-[420px] border border-black block font-semibold text-center bg-black text-white px-4 py-2"
                   >
                     Plan for Individuals
                   </a>
                   <a
                     href="#"
-                    className="max-w-[420px] w-4/5 border border-black block font-semibold text-center text-black bg-white p-4"
+                    className="max-w-[420px] w-full md:w-4/5 border border-black block font-semibold text-center text-black bg-white px-4 py-2"
                   >
                     Plans for Organizations
                   </a>
@@ -88,7 +88,7 @@ export default function ImageSlider({ images }: IProps) {
           </div>
         ))}
       </div>
-      <div className="w-full h-full hidden md:flex overflow-hidden">
+      <div className="w-full h-full hidden md:flex overflow-x-hidden">
         {images.map((image) => (
           <div
             key={image.title}
@@ -103,8 +103,8 @@ export default function ImageSlider({ images }: IProps) {
             {/* First Box */}
             <div
               className={`${
-                imageIndex === 0 ? "opacity-100" : "opacity-0"
-              } left-24  absolute top-1/2 transform -translate-y-1/2 bg-white border shadow-lg w-96 p-4 `}
+                imageIndex === 0 ? "opacity-100 z-20" : "opacity-0 z-0"
+              } left-24 absolute top-1/2 transform -translate-y-1/2 bg-white border shadow-lg w-96 p-4 `}
             >
               <h2 className="text-3xl font-bold">Stuck in neutral?</h2>
               <p className="font-medium py-3 max-w-80">
@@ -115,7 +115,7 @@ export default function ImageSlider({ images }: IProps) {
             {/* Second Box */}
             <div
               className={`${
-                imageIndex === 1 ? "opacity-100" : "opacity-0"
+                imageIndex === 1 ? "opacity-100 z-20" : "opacity-0 z-0"
               } left-24 absolute top-1/2 transform -translate-y-1/2 bg-white border shadow-lg w-[450px] p-4  duration-300`}
             >
               <h2 className="text-3xl font-bold">
@@ -129,7 +129,7 @@ export default function ImageSlider({ images }: IProps) {
                 <BigButton>Plan for Individuals</BigButton>
                 <a
                   href="#"
-                  className="border border-black w-full block font-semibold text-center text-black bg-white p-4"
+                  className="border border-black w-full block font-semibold text-center text-black bg-white p-4 hover:bg-gray-200"
                 >
                   Plans for Organizations
                 </a>
@@ -151,7 +151,6 @@ export default function ImageSlider({ images }: IProps) {
       >
         <FaAngleRight />
       </button>
-      <div className="text-4xl text-black">hello</div>
     </div>
   );
 }

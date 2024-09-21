@@ -200,8 +200,8 @@ export default function Aside({ asideOpen, setAsideOpen }: IProps) {
       </aside>
       <button
         className={`${
-          asideOpen ? "opacity-100 delay-300" : "opacity-0 delay-0"
-        } aside-close bg-white p-4 rounded-full transition-all duration-300 z-20 fixed top-2 left-72 md:hidden border`}
+          asideOpen ? "opacity-100 delay-300 z-20" : "opacity-0 delay-0 -z-10"
+        } aside-close bg-white p-4 rounded-full transition-all duration-300 fixed top-2 left-72 md:hidden border`}
         onClick={() => setAsideOpen(false)}
       >
         <Close className="text-black" />
