@@ -4,6 +4,7 @@ import ImageSlider from "./components/ImageSlider";
 import { images } from "./data";
 import PartnersSection from "./components/Partners";
 import Features from "./components/Features";
+import UdemyBusiness from "./components/UdemyBusiness";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
       <main>
         <PartnersSection />
         <Features />
+        <UdemyBusiness />
       </main>
     </>
   );

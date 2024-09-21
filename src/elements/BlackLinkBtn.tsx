@@ -4,7 +4,7 @@ interface IProps {
   width?: string;
   textAlign?: string;
 }
-export default function WhiteLinkBtn({
+export default function BlackLinkBtn({
   text,
   url,
   width = "",
@@ -13,7 +13,7 @@ export default function WhiteLinkBtn({
   return (
     <a
       href={url}
-      className={`${width} ${textAlign} hover:bg-gray-200 bg-transparent border block w-fit font-bold border-black px-4 py-2 text-sm`}
+      className={`${width} ${textAlign} hover:opacity-70 border block w-fit font-bold border-black px-4 py-2 text-sm bg-black text-white`}
     >
       {text}
     </a>
