@@ -11,7 +11,7 @@ export default function Features() {
         <h3 className="text-2xl font-bold text-black">
           Featured topics by category
         </h3>
-        <ul className="grid gap-x-8 grid-cols-2 md:grid-cols-4">
+        <ul className="grid pt-2 gap-x-8 gap-y-2 md:gap-y-0 grid-cols-2 md:grid-cols-4">
           <li>
             <Subheader title="Development" />
             <Category>
@@ -96,7 +96,7 @@ export default function Features() {
               </div>
             </Category>
           </li>
-          <div className="col-span-full mt-8">
+          <div className="col-span-full mt-4 md:mt-8">
             <WhiteLinkBtn text="Explore more topics" url="#" />
           </div>
         </ul>
