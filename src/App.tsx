@@ -1,6 +1,6 @@
-import Courses from './Pages/Courses';
-import CustomerStory from './Pages/CustomerStory';
-import Testimonials from './Pages/Testimonials';
+import Courses from './Components/Courses';
+import CustomerStory from './Components/CustomerStory';
+import Testimonials from './Components/Testimonials';
 
 export default function App() {
 	return (
