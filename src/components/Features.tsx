@@ -97,7 +97,7 @@ export default function Features() {
             </Category>
           </li>
           <div className="col-span-full mt-4 md:mt-8">
-            <WhiteLinkBtn text="Explore more topics" url="#" />
+            <WhiteLinkBtn width="w-fit" text="Explore more topics" url="#" />
           </div>
         </ul>
       </div>
