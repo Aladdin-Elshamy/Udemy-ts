@@ -1,11 +1,11 @@
 import { IoSearchSharp } from "react-icons/io5";
 import { Close } from "../utilities/utili.icons";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSearchClose } from "../app/features/Search/SearchSlice";
 
-interface IProps {
-  setSearchOpen: (open: boolean) => void;
-}
-export default function Search({ setSearchOpen }: IProps) {
+export default function Search() {
+  const dispatch = useDispatch();
   const [course, setCourse] = useState("");
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setCourse(e.target.value);
@@ -36,7 +36,7 @@ export default function Search({ setSearchOpen }: IProps) {
           <IoSearchSharp className="absolute left-3 top-1/2 -translate-y-1/2 text-xl" />
         </button>
         <button
-          onClick={() => setSearchOpen(false)}
+          onClick={() => dispatch(setSearchClose())}
           className="py-4 px-2 absolute right-2 top-1/2 -translate-y-1/2"
         >
           <Close w="12" h="12" />

@@ -2,20 +2,23 @@ import { useState } from "react";
 import { FaAngleLeft } from "react-icons/fa6";
 
 interface IProps {
-  langAsideOpen: boolean;
-  setLangAsideOpen: (open: boolean) => void;
+  langSidebarOpen: boolean;
+  setLangSidebarOpen: (open: boolean) => void;
 }
-export default function LangAside({ langAsideOpen, setLangAsideOpen }: IProps) {
+export default function LangAside({
+  langSidebarOpen,
+  setLangSidebarOpen,
+}: IProps) {
   const [lang, setLang] = useState("English");
   return (
     <div
       className={`${
-        langAsideOpen ? "right-0" : "right-[-100%]"
+        langSidebarOpen ? "right-0" : "right-[-100%]"
       } absolute top-0 bg-white w-full h-full z-50`}
     >
       <button
         className="flex items-center bg-gray-100 w-full px-4 gap-2 py-4"
-        onClick={() => setLangAsideOpen(false)}
+        onClick={() => setLangSidebarOpen(false)}
       >
         <FaAngleLeft />
         <p>Menu</p>

@@ -5,12 +5,12 @@ interface IProps {
   setOpen: (open: string) => void;
   children: ReactNode;
 }
-export default function NestedDropdownMenu({ open, children }: IProps) {
+export default function SubDropdown({ open, children }: IProps) {
   return (
     <div
       className={`${
         open ? "block" : "hidden"
-      } left-56 lg:left-64 h-[600px] w-56 lg:w-80 absolute top-6 border shadow-lg bg-white z-50`}
+      } left-[223px] lg:left-[319px] h-[600px] w-56 lg:w-72 absolute top-[-1px] border bg-white z-50`}
     >
       {children}
     </div>

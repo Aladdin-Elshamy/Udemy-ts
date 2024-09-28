@@ -1,7 +1,7 @@
+import LinkBtn from "../elements/LinkBtn";
 import Subheader from "../elements/Subheader";
 import TopicLearners from "../elements/TopicLearners";
 import TopicTitle from "../elements/TopicTitle";
-import WhiteLinkBtn from "../elements/WhiteLinkBtn";
 import Category from "../ui/Category";
 
 export default function Features() {
@@ -97,7 +97,9 @@ export default function Features() {
             </Category>
           </li>
           <div className="col-span-full mt-4 md:mt-8">
-            <WhiteLinkBtn width="w-fit" text="Explore more topics" url="#" />
+            <LinkBtn href="#" align="center" variant="white" width={"fit"}>
+              Explore all topics
+            </LinkBtn>
           </div>
         </ul>
       </div>
