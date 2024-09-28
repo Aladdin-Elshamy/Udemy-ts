@@ -1,17 +1,15 @@
-import React from "react";
 import { BiCheck } from "react-icons/bi";
+import CardTitle from "../../elements/CardTitle";
 
 const HomeSliderCard = () => {
   return (
-    <div className="shadow-md w-full relative p-4 flex flex-col gap-2">
+    <div className="w-full  p-4 flex flex-col gap-2">
       {/* <span
         className="absolute left-[-20px] top-1/2 translate-y-[-50%] w-0 h-0 
       border-[10px] border-solid border-transparent border-r-gray-300 "
       ></span> */}
       <div className="flex flex-col gap-2">
-        <h3 className="font-bold">
-          The Complete 2024 Web Development Bootcamp
-        </h3>
+        <CardTitle title={"The Complete 2024 Web Development Bootcamp"}/>
         <div className="flex gap-2 items-center">
           <span className="p-1 bg-amber-300">Bestseller</span>
           <span className="text-sm">Updated September 2024</span>
